@@ -1,0 +1,18 @@
+
+        fig1, ax1 = plt.subplots()
+        ax1 = data.ix['1969':].plot(ax=ax1)
+        results.plot_predict(data[0][0], end='2012')
+        results.plot()
+        saveFile = "output/graph_"+str(i)+".png"
+        plt.savefig(saveFile)
+        plt.close()
+
+
+誤差を求める
+
+1960-2011までを学習
+2011-2012を予測
+
+2011までを取得して2012の値を予測して誤差を求める.
+
+コメント数の時系列をとって予測。
